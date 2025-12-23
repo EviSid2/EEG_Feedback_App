@@ -1,1 +1,1 @@
-Save the recordings in this folder for the application to locate the files automatically.
+Save the EEG recordings in this folder (CSV-files) for the application to locate the files automatically.
