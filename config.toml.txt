@@ -1,0 +1,15 @@
+[client]
+showErrorDetails = false
+toolbarMode = "minimal"
+
+
+[theme]
+base = "light"
+primaryColor = "#4AA3A2"            # button accent
+backgroundColor = "#F7FCFA"         # very light mint
+secondaryBackgroundColor = "#EAF4F2" # panels/expander light
+textColor = "#174C4F"               # deep blue-green
+font = "sans serif"
+
+[server]
+headless = true
