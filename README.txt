@@ -1,42 +1,35 @@
-🧠 EEG Insight App — Bachelor Thesis Study
+🧠 EEG Feedback App — What's The Verdict?
 
-Welcome to the EEG Insight App, an interactive tool designed for a user study examining personalized neurofeedback insights derived from EEG recordings.
-This app is built with Python and Streamlit and can be deployed online so participants can use it without installing anything.
+Welcome to the EEG Feedback App, designed for a user study examining neurofeedback presentation modalities of EEG recordings.
+This app is built with Python and Streamlit and uses the localy installed Ollama model - qwen2.5:1.5b-instruct-q4_K_M - for the AI-Coach.
 
 🚀 Features
 
 --Start Page--
-Upload or select EEG sessions
+Upload or select an EEG recording session. The recordings need to be .CSV files.
 
-In study mode, users choose one of several predefined example recordings.
-
-Alternatively, they can upload their own exported OpenBCI .csv files.
+The application automatically locates the newest file under OpenBCI_Exports/Recordings. 
+Alternatively, you can use the manual upload option to select a recording. 
 
 --Personalization form--
 
-Participants enter demographic + contextual details to customize feedback.
-Tthe only mandatory field is the task selection. Everything else is optional and only there for a more personalized result. Thus this step can be skipped.
+Enter demographic + contextual details to customize feedback.
+The only mandatory field here is the task selection. Everything else is optional and only there for a more personalized feedback by the AI-Coach.
+You need to consent to the anonymous use of your answers (even if you only entered the task) to continue.
 
 --Multiple visualization modes--
 
-Visual Feedback (orb/splatter/graph representation)
+Visual Feedback (calmness-orb + focus bar + graph representation)
 
-Literal Feedback (metaphor-poem/text-based interpretation)
+Literal Feedback (metaphor/poem + technical explanations)
 
-LLM Coach (prewritten, study-mode AI feedback)
+LLM Coach (real-time AI feedback)
 
-A short AI Coach feedback can be selected for Visual/Literal Mode. 
+You can select one of the three visualization modalities, but have the option to get back to this page and explore the rest.
+An additional short AI-Coach feedback can be selected for Visual/Literal mode. 
+There is an option to start over (go back to start) from any visualization mode.
 
---Study Mode--
+--AI--
 
-When enabled, all AI responses come from stored .html files
-
-Participants never need to run an AI model locally
-
-Ensures consistent feedback across the user study
-
---Deactivated Study Mode / Installed--
-
-When the study mode is deactivated the user can still upload files manually or add the file in the Recordings folder directly. The newest file is then picked.
-In personalization, the only mandatory field is the task selection. Everything else is optional and only there for a more personalized result (from the AI Coach). Thus this step can be skipped.
-With the deactivated study mode -> realtime feedback from (downloaded) AI Coach (Ollama) is displayed
+There is an option to refresh the AI feedback (only in the LLM Mode).
+The Ollama model can be changed to a model of your choice, by simply adjusting the name. (Please note, that this only works smoothly with any other Ollama model. Other AI assistants may need more adjustments)
